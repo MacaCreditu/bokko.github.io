@@ -1,58 +1,37 @@
 <template>
   <div id="app">
-    <div class="header">
-      <Buy/>
-    </div>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/new-collection" class="new"></router-link>
-    </div>
-    <router-view/>
+    <img class="logo" alt="Bokko logo" src="./assets/logo-bokko.jpg">
+    <HelloWorld msg="Winter Collection"/>
+    <PrimaryNav></PrimaryNav>
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Buy from '@/components/Buy.vue'
+import PrimaryNav from './components/PrimaryNav.vue'
+import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
   components: {
-    Buy
+    PrimaryNav,
+    HelloWorld
   }
 }
 </script>
 
 <style>
-@import './assets/css/style.css';
-
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-}
-#nav a.router-link-exact-active {
-  color: #cb023f;
-}
-
-#nav .new{
-  background: url(/img/tag-new.png) top center no-repeat;
-  background-size: 44px;
-  width: 50px;
-  display: inline-block;
-  padding-top: 12px;
-  padding-bottom: 6px;
+.logo{
+  width: 100%;
+  max-width: 700px;
 }
 </style>

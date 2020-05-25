@@ -1,4 +1,4 @@
-# catalogobokko
+# catalogo
 
 ## Project setup
 ```
